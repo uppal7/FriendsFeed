@@ -1,0 +1,9 @@
+{% extends 'feed/base.html' %}
+
+{% block content %}
+	<ul>
+		{% for friend in friends %}
+			<li><a href="{% url 'f-profile' friend.name %}">{{ friend.name }}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}

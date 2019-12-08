@@ -1,0 +1,8 @@
+{% extends 'feed/base.html' %}
+
+{% block content %}
+<h3>Index</h3>
+<a href="{% url 'profile' request.user.id %}" class="btn btn-info">Profile</a><br>
+<a href="{% url 'friends' request.user.id %}" class="btn btn-success">Friends</a>
+<a href="{% url 'logout' %}">Logout</a>
+{% endblock %}
